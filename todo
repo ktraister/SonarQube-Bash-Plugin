@@ -1,0 +1,1 @@
+I’m having some trouble configuring my pom.xml for a SonarQube plugin I’m working on. I’ve configured a parent resource for a maven plugin I need to package the software, but it’s giving me a “Non-resolvable parent POM” error. Do you have any ideas on how to solve that
