@@ -52,7 +52,7 @@ public class ScriptAnalyzerSensor implements org.sonar.api.batch.sensor.Sensor {
 			final File parserFile = folder.newFile("sh", "scriptAnalyzer.sh");
 
 			try {
-				FileUtils.copyURLToFile(getClass().getResource("/scriptAnalyzer.sh"), parserFile);
+				FileUtils.copyURLToFile(getClass().getResource("./scriptAnalyzer.sh"), parserFile);
 			} catch (final Throwable e1) {
 				LOGGER.warn("Exception while copying tokenizer script", e1);
 				return;

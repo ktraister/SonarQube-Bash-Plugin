@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: org.sonar.plugins.bash.TokenizerSensorTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.027 s <<< FAILURE! - in org.sonar.plugins.bash.TokenizerSensorTest
+testExecute(org.sonar.plugins.bash.TokenizerSensorTest)  Time elapsed: 0.027 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.sonar.plugins.bash.TokenizerSensorTest.testExecute(TokenizerSensorTest.java:41)
+

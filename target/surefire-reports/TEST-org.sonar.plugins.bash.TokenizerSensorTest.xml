@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="org.sonar.plugins.bash.TokenizerSensorTest" time="0.027" tests="1" errors="1" skipped="0" failures="0">
+  <properties>
+    <property name="gopherProxySet" value="false"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/ktraiste/git/sonar-bash-plugin/target/test-classes:/Users/ktraiste/git/sonar-bash-plugin/target/classes:/Users/ktraiste/.m2/repository/org/sonarsource/sonar-packaging-maven-plugin/sonar-packaging-maven-plugin/1.15/sonar-packaging-maven-plugin-1.15.jar:/Users/ktraiste/.m2/repository/com/google/guava/guava/18.0/guava-18.0.jar:/Users/ktraiste/.m2/repository/org/apache/maven/maven-archiver/2.5/maven-archiver-2.5.jar:/Users/ktraiste/.m2/repository/org/apache/maven/maven-artifact/2.0.6/maven-artifact-2.0.6.jar:/Users/ktraiste/.m2/repository/org/apache/maven/maven-model/2.0.6/maven-model-2.0.6.jar:/Users/ktraiste/.m2/repository/org/apache/maven/maven-core/2.0.6/maven-core-2.0.6.jar:/Users/ktraiste/.m2/repository/org/apache/maven/maven-settings/2.0.6/maven-settings-2.0.6.jar:/Users/ktraiste/.m2/repository/org/apache/maven/wagon/wagon-file/1.0-beta-2/wagon-file-1.0-beta-2.jar:/Users/ktraiste/.m2/repository/org/apache/maven/maven-plugin-parameter-documenter/2.0.6/maven-plugin-parameter-documenter-2.0.6.jar:/Users/ktraiste/.m2/repository/org/apache/maven/wagon/wagon-http-lightweight/1.0-beta-2/wagon-http-lightweight-1.0-beta-2.jar:/Users/ktraiste/.m2/repository/org/apache/maven/wagon/wagon-http-shared/1.0-beta-2/wagon-http-shared-1.0-beta-2.jar:/Users/ktraiste/.m2/repository/jtidy/jtidy/4aug2000r7-dev/jtidy-4aug2000r7-dev.jar:/Users/ktraiste/.m2/repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar:/Users/ktraiste/.m2/repository/org/apache/maven/reporting/maven-reporting-api/2.0.6/maven-reporting-api-2.0.6.jar:/Users/ktraiste/.m2/repository/org/apache/maven/doxia/doxia-sink-api/1.0-alpha-7/doxia-sink-api-1.0-alpha-7.jar:/Users/ktraiste/.m2/repository/org/apache/maven/maven-profile/2.0.6/maven-profile-2.0.6.jar:/Users/ktraiste/.m2/repository/org/apache/maven/wagon/wagon-provider-api/1.0-beta-2/wagon-provider-api-1.0-beta-2.jar:/Users/ktraiste/.m2/repository/org/codehaus/plexus/plexus-container-default/1.0-alpha-9-stable-1/plexus-container-default-1.0-alpha-9-stable-1.jar:/Users/ktraiste/.m2/repository/org/apache/maven/maven-repository-metadata/2.0.6/maven-repository-metadata-2.0.6.jar:/Users/ktraiste/.m2/repository/org/apache/maven/maven-error-diagnostics/2.0.6/maven-error-diagnostics-2.0.6.jar:/Users/ktraiste/.m2/repository/commons-cli/commons-cli/1.0/commons-cli-1.0.jar:/Users/ktraiste/.m2/repository/org/apache/maven/maven-plugin-api/2.0.6/maven-plugin-api-2.0.6.jar:/Users/ktraiste/.m2/repository/org/apache/maven/wagon/wagon-ssh-external/1.0-beta-2/wagon-ssh-external-1.0-beta-2.jar:/Users/ktraiste/.m2/repository/org/apache/maven/wagon/wagon-ssh-common/1.0-beta-2/wagon-ssh-common-1.0-beta-2.jar:/Users/ktraiste/.m2/repository/org/apache/maven/maven-plugin-descriptor/2.0.6/maven-plugin-descriptor-2.0.6.jar:/Users/ktraiste/.m2/repository/org/codehaus/plexus/plexus-interactivity-api/1.0-alpha-4/plexus-interactivity-api-1.0-alpha-4.jar:/Users/ktraiste/.m2/repository/org/apache/maven/maven-artifact-manager/2.0.6/maven-artifact-manager-2.0.6.jar:/Users/ktraiste/.m2/repository/org/apache/maven/maven-monitor/2.0.6/maven-monitor-2.0.6.jar:/Users/ktraiste/.m2/repository/org/apache/maven/wagon/wagon-ssh/1.0-beta-2/wagon-ssh-1.0-beta-2.jar:/Users/ktraiste/.m2/repository/com/jcraft/jsch/0.1.27/jsch-0.1.27.jar:/Users/ktraiste/.m2/repository/classworlds/classworlds/1.1/classworlds-1.1.jar:/Users/ktraiste/.m2/repository/org/codehaus/plexus/plexus-archiver/2.1/plexus-archiver-2.1.jar:/Users/ktraiste/.m2/repository/org/codehaus/plexus/plexus-io/2.0.2/plexus-io-2.0.2.jar:/Users/ktraiste/.m2/repository/org/codehaus/plexus/plexus-utils/3.0/plexus-utils-3.0.jar:/Users/ktraiste/.m2/repository/org/codehaus/plexus/plexus-interpolation/1.15/plexus-interpolation-1.15.jar:/Users/ktraiste/.m2/repository/org/apache/maven/shared/maven-dependency-tree/2.1/maven-dependency-tree-2.1.jar:/Users/ktraiste/.m2/repository/org/apache/maven/maven-project/2.2.0/maven-project-2.2.0.jar:/Users/ktraiste/.m2/repository/org/apache/maven/maven-plugin-registry/2.2.0/maven-plugin-registry-2.2.0.jar:/Users/ktraiste/.m2/repository/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.jar:/Users/ktraiste/.m2/repository/org/eclipse/aether/aether-util/0.9.0.M2/aether-util-0.9.0.M2.jar:/Users/ktraiste/.m2/repository/org/sonarsource/sonarqube/sonar-plugin-api/6.3/sonar-plugin-api-6.3.jar:/Users/ktraiste/.m2/repository/org/codehaus/woodstox/woodstox-core-lgpl/4.4.0/woodstox-core-lgpl-4.4.0.jar:/Users/ktraiste/.m2/repository/javax/xml/stream/stax-api/1.0-2/stax-api-1.0-2.jar:/Users/ktraiste/.m2/repository/org/codehaus/woodstox/stax2-api/3.1.4/stax2-api-3.1.4.jar:/Users/ktraiste/.m2/repository/org/codehaus/staxmate/staxmate/2.0.1/staxmate-2.0.1.jar:/Users/ktraiste/.m2/repository/org/apache/commons/commons-lang3/3.5/commons-lang3-3.5.jar:/Users/ktraiste/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/Users/ktraiste/.m2/repository/commons-io/commons-io/1.3.2/commons-io-1.3.2.jar:/Users/ktraiste/.m2/repository/org/sonarsource/sonarqube/sonar-testing-harness/6.3/sonar-testing-harness-6.3.jar:/Users/ktraiste/.m2/repository/org/assertj/assertj-core/3.4.1/assertj-core-3.4.1.jar:/Users/ktraiste/.m2/repository/org/assertj/assertj-guava/3.0.0/assertj-guava-3.0.0.jar:/Users/ktraiste/.m2/repository/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar:/Users/ktraiste/.m2/repository/com/google/code/gson/gson/2.3.1/gson-2.3.1.jar:/Users/ktraiste/.m2/repository/com/tngtech/java/junit-dataprovider/1.9.2/junit-dataprovider-1.9.2.jar:/Users/ktraiste/.m2/repository/org/hamcrest/hamcrest-all/1.3/hamcrest-all-1.3.jar:/Users/ktraiste/.m2/repository/org/mockito/mockito-core/1.10.19/mockito-core-1.10.19.jar:/Users/ktraiste/.m2/repository/org/objenesis/objenesis/2.1/objenesis-2.1.jar:/Users/ktraiste/.m2/repository/junit/junit/4.11/junit-4.11.jar:/Users/ktraiste/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/jre/lib"/>
+    <property name="sun.java.command" value="/Users/ktraiste/git/sonar-bash-plugin/target/surefire/surefirebooter2098818226277814550.jar /Users/ktraiste/git/sonar-bash-plugin/target/surefire 2018-08-15T22-04-08_616-jvmRun1 surefire4891142013344944801tmp surefire_07310522301390547671tmp"/>
+    <property name="surefire.test.class.path" value="/Users/ktraiste/git/sonar-bash-plugin/target/test-classes:/Users/ktraiste/git/sonar-bash-plugin/target/classes:/Users/ktraiste/.m2/repository/org/sonarsource/sonar-packaging-maven-plugin/sonar-packaging-maven-plugin/1.15/sonar-packaging-maven-plugin-1.15.jar:/Users/ktraiste/.m2/repository/com/google/guava/guava/18.0/guava-18.0.jar:/Users/ktraiste/.m2/repository/org/apache/maven/maven-archiver/2.5/maven-archiver-2.5.jar:/Users/ktraiste/.m2/repository/org/apache/maven/maven-artifact/2.0.6/maven-artifact-2.0.6.jar:/Users/ktraiste/.m2/repository/org/apache/maven/maven-model/2.0.6/maven-model-2.0.6.jar:/Users/ktraiste/.m2/repository/org/apache/maven/maven-core/2.0.6/maven-core-2.0.6.jar:/Users/ktraiste/.m2/repository/org/apache/maven/maven-settings/2.0.6/maven-settings-2.0.6.jar:/Users/ktraiste/.m2/repository/org/apache/maven/wagon/wagon-file/1.0-beta-2/wagon-file-1.0-beta-2.jar:/Users/ktraiste/.m2/repository/org/apache/maven/maven-plugin-parameter-documenter/2.0.6/maven-plugin-parameter-documenter-2.0.6.jar:/Users/ktraiste/.m2/repository/org/apache/maven/wagon/wagon-http-lightweight/1.0-beta-2/wagon-http-lightweight-1.0-beta-2.jar:/Users/ktraiste/.m2/repository/org/apache/maven/wagon/wagon-http-shared/1.0-beta-2/wagon-http-shared-1.0-beta-2.jar:/Users/ktraiste/.m2/repository/jtidy/jtidy/4aug2000r7-dev/jtidy-4aug2000r7-dev.jar:/Users/ktraiste/.m2/repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar:/Users/ktraiste/.m2/repository/org/apache/maven/reporting/maven-reporting-api/2.0.6/maven-reporting-api-2.0.6.jar:/Users/ktraiste/.m2/repository/org/apache/maven/doxia/doxia-sink-api/1.0-alpha-7/doxia-sink-api-1.0-alpha-7.jar:/Users/ktraiste/.m2/repository/org/apache/maven/maven-profile/2.0.6/maven-profile-2.0.6.jar:/Users/ktraiste/.m2/repository/org/apache/maven/wagon/wagon-provider-api/1.0-beta-2/wagon-provider-api-1.0-beta-2.jar:/Users/ktraiste/.m2/repository/org/codehaus/plexus/plexus-container-default/1.0-alpha-9-stable-1/plexus-container-default-1.0-alpha-9-stable-1.jar:/Users/ktraiste/.m2/repository/org/apache/maven/maven-repository-metadata/2.0.6/maven-repository-metadata-2.0.6.jar:/Users/ktraiste/.m2/repository/org/apache/maven/maven-error-diagnostics/2.0.6/maven-error-diagnostics-2.0.6.jar:/Users/ktraiste/.m2/repository/commons-cli/commons-cli/1.0/commons-cli-1.0.jar:/Users/ktraiste/.m2/repository/org/apache/maven/maven-plugin-api/2.0.6/maven-plugin-api-2.0.6.jar:/Users/ktraiste/.m2/repository/org/apache/maven/wagon/wagon-ssh-external/1.0-beta-2/wagon-ssh-external-1.0-beta-2.jar:/Users/ktraiste/.m2/repository/org/apache/maven/wagon/wagon-ssh-common/1.0-beta-2/wagon-ssh-common-1.0-beta-2.jar:/Users/ktraiste/.m2/repository/org/apache/maven/maven-plugin-descriptor/2.0.6/maven-plugin-descriptor-2.0.6.jar:/Users/ktraiste/.m2/repository/org/codehaus/plexus/plexus-interactivity-api/1.0-alpha-4/plexus-interactivity-api-1.0-alpha-4.jar:/Users/ktraiste/.m2/repository/org/apache/maven/maven-artifact-manager/2.0.6/maven-artifact-manager-2.0.6.jar:/Users/ktraiste/.m2/repository/org/apache/maven/maven-monitor/2.0.6/maven-monitor-2.0.6.jar:/Users/ktraiste/.m2/repository/org/apache/maven/wagon/wagon-ssh/1.0-beta-2/wagon-ssh-1.0-beta-2.jar:/Users/ktraiste/.m2/repository/com/jcraft/jsch/0.1.27/jsch-0.1.27.jar:/Users/ktraiste/.m2/repository/classworlds/classworlds/1.1/classworlds-1.1.jar:/Users/ktraiste/.m2/repository/org/codehaus/plexus/plexus-archiver/2.1/plexus-archiver-2.1.jar:/Users/ktraiste/.m2/repository/org/codehaus/plexus/plexus-io/2.0.2/plexus-io-2.0.2.jar:/Users/ktraiste/.m2/repository/org/codehaus/plexus/plexus-utils/3.0/plexus-utils-3.0.jar:/Users/ktraiste/.m2/repository/org/codehaus/plexus/plexus-interpolation/1.15/plexus-interpolation-1.15.jar:/Users/ktraiste/.m2/repository/org/apache/maven/shared/maven-dependency-tree/2.1/maven-dependency-tree-2.1.jar:/Users/ktraiste/.m2/repository/org/apache/maven/maven-project/2.2.0/maven-project-2.2.0.jar:/Users/ktraiste/.m2/repository/org/apache/maven/maven-plugin-registry/2.2.0/maven-plugin-registry-2.2.0.jar:/Users/ktraiste/.m2/repository/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.jar:/Users/ktraiste/.m2/repository/org/eclipse/aether/aether-util/0.9.0.M2/aether-util-0.9.0.M2.jar:/Users/ktraiste/.m2/repository/org/sonarsource/sonarqube/sonar-plugin-api/6.3/sonar-plugin-api-6.3.jar:/Users/ktraiste/.m2/repository/org/codehaus/woodstox/woodstox-core-lgpl/4.4.0/woodstox-core-lgpl-4.4.0.jar:/Users/ktraiste/.m2/repository/javax/xml/stream/stax-api/1.0-2/stax-api-1.0-2.jar:/Users/ktraiste/.m2/repository/org/codehaus/woodstox/stax2-api/3.1.4/stax2-api-3.1.4.jar:/Users/ktraiste/.m2/repository/org/codehaus/staxmate/staxmate/2.0.1/staxmate-2.0.1.jar:/Users/ktraiste/.m2/repository/org/apache/commons/commons-lang3/3.5/commons-lang3-3.5.jar:/Users/ktraiste/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/Users/ktraiste/.m2/repository/commons-io/commons-io/1.3.2/commons-io-1.3.2.jar:/Users/ktraiste/.m2/repository/org/sonarsource/sonarqube/sonar-testing-harness/6.3/sonar-testing-harness-6.3.jar:/Users/ktraiste/.m2/repository/org/assertj/assertj-core/3.4.1/assertj-core-3.4.1.jar:/Users/ktraiste/.m2/repository/org/assertj/assertj-guava/3.0.0/assertj-guava-3.0.0.jar:/Users/ktraiste/.m2/repository/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar:/Users/ktraiste/.m2/repository/com/google/code/gson/gson/2.3.1/gson-2.3.1.jar:/Users/ktraiste/.m2/repository/com/tngtech/java/junit-dataprovider/1.9.2/junit-dataprovider-1.9.2.jar:/Users/ktraiste/.m2/repository/org/hamcrest/hamcrest-all/1.3/hamcrest-all-1.3.jar:/Users/ktraiste/.m2/repository/org/mockito/mockito-core/1.10.19/mockito-core-1.10.19.jar:/Users/ktraiste/.m2/repository/org/objenesis/objenesis/2.1/objenesis-2.1.jar:/Users/ktraiste/.m2/repository/junit/junit/4.11/junit-4.11.jar:/Users/ktraiste/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/ktraiste"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/jre"/>
+    <property name="basedir" value="/Users/ktraiste/git/sonar-bash-plugin"/>
+    <property name="file.separator" value="/"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="/Users/ktraiste/git/sonar-bash-plugin/target/surefire/surefirebooter2098818226277814550.jar"/>
+    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/jre/classes"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0_172-b11"/>
+    <property name="user.name" value="ktraiste"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="10.13.6"/>
+    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/jre/lib/endorsed"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="/Users/ktraiste/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/var/folders/_c/8hdddw_d015bjj6b8f89mf199j21nn/T/"/>
+    <property name="java.version" value="1.8.0_172"/>
+    <property name="user.dir" value="/Users/ktraiste/git/sonar-bash-plugin"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/Users/ktraiste/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.172-b11"/>
+    <property name="java.ext.dirs" value="/Users/ktraiste/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+  <testcase name="testExecute" classname="org.sonar.plugins.bash.TokenizerSensorTest" time="0.027">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at org.sonar.plugins.bash.TokenizerSensorTest.testExecute(TokenizerSensorTest.java:41)
+</error>
+    <system-out><![CDATA[WARN  Exception while copying tokenizer script
+]]></system-out>
+    <system-err><![CDATA[java.lang.NullPointerException
+	at org.apache.commons.io.FileUtils.copyURLToFile(FileUtils.java:844)
+	at org.sonar.plugins.bash.TokenizerSensor.execute(TokenizerSensor.java:72)
+	at org.sonar.plugins.bash.TokenizerSensorTest.testExecute(TokenizerSensorTest.java:39)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.rules.ExternalResource$1.evaluate(ExternalResource.java:48)
+	at org.junit.rules.ExternalResource$1.evaluate(ExternalResource.java:48)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:383)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:344)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
+]]></system-err>
+  </testcase>
+</testsuite>

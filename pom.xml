@@ -2,17 +2,19 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
+	<!--
 	<parent>
 		<groupId>org.sonarsource.sonar-packaging-maven-plugin</groupId>
                 <artifactId>sonar-packaging-maven-plugin</artifactId>
-                <version>1.15</version>
+		<version>1.17</version>
 		<relativePath />
 	</parent>
+        -->
 
 	<groupId>org.sonar.plugins</groupId>
 	<artifactId>sonar-bash-plugin</artifactId>
 	<packaging>sonar-plugin</packaging>
-	<version>0.0.1</version>
+	<version>0.3.0</version>
 
 	<name>Bash Plugin for SonarQube</name>
 	<description>Bash plugin for SonarQube</description>
@@ -110,7 +112,7 @@
 			<plugin>
 				<groupId>org.sonarsource.sonar-packaging-maven-plugin</groupId>
 				<artifactId>sonar-packaging-maven-plugin</artifactId>
-				<version>1.19</version>
+				<version>1.17</version>
 				<extensions>true</extensions>
 				<configuration>
 					<pluginClass>org.sonar.plugins.bash.BashPlugin</pluginClass>

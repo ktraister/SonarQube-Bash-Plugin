@@ -1,4 +1,4 @@
-package org.sonar.plugins.powershell;
+package org.sonar.plugins.bash;
 
 import org.junit.Assert;
 import org.junit.Test;

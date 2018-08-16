@@ -1,0 +1,3 @@
+/Users/ktraiste/git/sonar-bash-plugin/src/test/java/org/sonar/plugins/bash/ScriptAnalyzerRulesDefinitionTest.java
+/Users/ktraiste/git/sonar-bash-plugin/src/test/java/org/sonar/plugins/bash/ScriptAnalyzerSensorTest.java
+/Users/ktraiste/git/sonar-bash-plugin/src/test/java/org/sonar/plugins/bash/TokenizerSensorTest.java

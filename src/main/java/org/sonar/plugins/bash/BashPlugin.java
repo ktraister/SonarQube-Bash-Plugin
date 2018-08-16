@@ -15,8 +15,8 @@ public class BashPlugin implements Plugin {
 		context.addExtension(PropertyDefinition.builder(Constants.SKIP_PLUGIN).name("Skip plugin")
 				.description("Flag whether to skip plugin").defaultValue("false").type(PropertyType.BOOLEAN)
 				.build());
-		context.addExtension(PropertyDefinition.builder(Constants.SH_EXECUTABLE).name("Path to bash executable")
-				.description("Path to bash executable").defaultValue("/bin/bash").type(PropertyType.STRING)
+		context.addExtension(PropertyDefinition.builder(Constants.SH_EXECUTABLE).name("Path to /bin/bashcutable")
+				.description("Path to /bin/bashcutable").defaultValue("/bin/bash").type(PropertyType.STRING)
 				.build());
 
 		context.addExtension(PropertyDefinition.builder(Constants.FILE_SUFFIXES).name("Suffixes to analyze")
