@@ -22,21 +22,32 @@ public class IssuesFiller {
 
 	public void fill(final SensorContext context, final File sourceDir, final Objects issues) {
 		final FileSystem fileSystem = context.fileSystem();
+		int x = 0;
 		for (final Objects.Object o : issues.getObject()) {
 			try {
+				x = 0;
 				final List<Objects.Object.Property> props = o.getProperty();
+				x = 1;
 				final String ruleName = getProperty("RuleName", props);
+				x = 2;
 				final String initialFile = getProperty("File", props);
+				x = 3;
 				final String fsFile = new PathResolver().relativePath(sourceDir, new File(initialFile));
+				x = 4;
 				final String message = getProperty("Message", props);
+				x = 5; 
 				final String line = getProperty("Line", props);
+				x = 6;
 				int issueLine = getLine(line);
+				x = 7;
 
+				//it's breaking on the next line
 				final RuleKey ruleKey = RuleKey.of(ScriptAnalyzerRulesDefinition.getRepositoryKeyForLanguage(),
 						ruleName);
+				x = 8; 
 				final org.sonar.api.batch.fs.InputFile file = fileSystem
 						.inputFile(fileSystem.predicates().and(fileSystem.predicates().hasRelativePath(fsFile)));
-
+				x = 9; 
 				if (file == null) {
 					LOGGER.warn(String.format("File %s not found", fsFile));
 					continue;
@@ -50,6 +61,7 @@ public class IssuesFiller {
 				issue.save();
 			} catch (final Throwable e) {
 				LOGGER.warn("Unexpected exception while adding issue", e);
+				LOGGER.warn("x: " + x);
 			}
 
 		}

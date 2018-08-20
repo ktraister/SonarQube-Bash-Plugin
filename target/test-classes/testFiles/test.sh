@@ -6,8 +6,9 @@ date=$(date +%s)
 outfile=/tmp/bash_scan_outfile-$date
 
 shellcheck ./target.sh -f gcc > "$outfile"
+echo $outfile
 
-while read -r line; do
+while read line; do
 	filename=$(echo "$line" | cut -d ' ' -f 1)
 	type=$(echo "$line" | cut -d ' ' -f 2 | tr -d ':')
 	ruleName=$(echo "$line" | cut -d ' ' -f 3-100)

@@ -1,6 +1,7 @@
 package org.sonar.plugins.bash;
 
 import java.io.File;
+import java.io.*;
 
 import javax.xml.bind.JAXBContext;
 
@@ -20,7 +21,7 @@ public class ScriptAnalyzerSensor implements org.sonar.api.batch.sensor.Sensor {
 
 	private final TempFolder folder;
 
-	private static final String shCommand = "%s -inputDir %s -output %s";
+	private static final String shCommand = "%s %s %s";
 
 	private static final Logger LOGGER = Loggers.get(ScriptAnalyzerSensor.class);
 
@@ -52,13 +53,14 @@ public class ScriptAnalyzerSensor implements org.sonar.api.batch.sensor.Sensor {
 			final File parserFile = folder.newFile("sh", "scriptAnalyzer.sh");
 
 			try {
-				FileUtils.copyURLToFile(getClass().getResource("./scriptAnalyzer.sh"), parserFile);
+				FileUtils.copyURLToFile(getClass().getResource("/scriptAnalyzer.sh"), parserFile);
 			} catch (final Throwable e1) {
 				LOGGER.warn("Exception while copying tokenizer script", e1);
 				return;
 			}
 			final String scriptFile = parserFile.getAbsolutePath();
 			final File resultsFile = folder.newFile();
+			LOGGER.info("resultsFile " + resultsFile);
 			final FileSystem fileSystem = context.fileSystem();
 			final File sourceDir = fileSystem.baseDir().toPath().toFile();
 
@@ -67,17 +69,32 @@ public class ScriptAnalyzerSensor implements org.sonar.api.batch.sensor.Sensor {
 
 			try {
 				LOGGER.info(String.format("Starting running bash analysis: %s", command));
-				final Process process = new ProcessBuilder(bashExecutable, command).start();
+				//final Process process = new ProcessBuilder(bashExecutable, command).start();
+				final Process process = new ProcessBuilder("/bin/bash", scriptFile, sourceDir.getAbsolutePath(), resultsFile.toPath().toFile().getAbsolutePath()).start();
 				process.waitFor();
+				LOGGER.info("process exit value: " + process.exitValue());
+				LOGGER.info("process: " + process);
 				LOGGER.info("Finished running bash analysis");
 
 			} catch (final Throwable e) {
-				LOGGER.warn("Error executing Bash script analyzer. Maybe Script-Analyzer is not installed?", e);
+				LOGGER.warn("Error executing Bash script analyzer. Maybe shellcheck is not installed?", e);
 				return;
 			}
 
+
+			LOGGER.info("start of outfile output");
+			BufferedReader br = new BufferedReader(new FileReader(resultsFile));
+			String st;
+                        while ((st = br.readLine()) != null) {
+                            LOGGER.info(st);
+                        }
+			LOGGER.info("end of outfile output");
+
+			LOGGER.info("results: " + resultsFile);
+			//https://stackoverflow.com/questions/17059227/read-xml-file-with-jaxb
 			final JAXBContext jaxbContext = JAXBContext.newInstance(Objects.class);
 			final Objects issues = (Objects) jaxbContext.createUnmarshaller().unmarshal(resultsFile);
+			LOGGER.info("ISSUES: " + issues);
 			this.issuesFiller.fill(context, sourceDir, issues);
 		} catch (Throwable e) {
 			LOGGER.warn("Unexpected exception while running analysis", e);

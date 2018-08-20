@@ -1,8 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: org.sonar.plugins.bash.ScriptAnalyzerRulesDefinitionTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.092 s <<< FAILURE! - in org.sonar.plugins.bash.ScriptAnalyzerRulesDefinitionTest
-testDefine(org.sonar.plugins.bash.ScriptAnalyzerRulesDefinitionTest)  Time elapsed: 0.092 s  <<< FAILURE!
-java.lang.AssertionError: expected:<1> but was:<55>
-	at org.sonar.plugins.bash.ScriptAnalyzerRulesDefinitionTest.testDefine(ScriptAnalyzerRulesDefinitionTest.java:15)
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.031 s <<< FAILURE! - in org.sonar.plugins.bash.ScriptAnalyzerRulesDefinitionTest
+testDefine(org.sonar.plugins.bash.ScriptAnalyzerRulesDefinitionTest)  Time elapsed: 0.031 s  <<< ERROR!
+java.lang.IllegalStateException: XML is not valid
+	at org.sonar.plugins.bash.ScriptAnalyzerRulesDefinitionTest.testDefine(ScriptAnalyzerRulesDefinitionTest.java:14)
+Caused by: com.ctc.wstx.exc.WstxParsingException: 
+Unexpected close tag </psrules>; expected </shrules>.
+ at [row,col {unknown-source}]: [664,9]
+	at org.sonar.plugins.bash.ScriptAnalyzerRulesDefinitionTest.testDefine(ScriptAnalyzerRulesDefinitionTest.java:14)
 

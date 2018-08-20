@@ -28,7 +28,7 @@ public class ScriptAnalyzerSensorTest {
 
 	
 		SensorContextTester ctxTester = SensorContextTester.create(folder.getRoot());
-		ctxTester.settings().setProperty(Constants.SH_EXECUTABLE, "/bin/bash");
+		ctxTester.settings().setProperty(Constants.SH_EXECUTABLE, "bash");
 		File baseFile = folder.newFile("test.sh");
 		FileUtils.copyURLToFile(getClass().getResource("/testFiles/test.sh"), baseFile);
 		DefaultInputFile ti = new TestInputFileBuilder("test", "test.sh")

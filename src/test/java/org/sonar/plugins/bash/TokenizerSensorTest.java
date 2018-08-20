@@ -25,11 +25,11 @@ public class TokenizerSensorTest {
 	@Test
 	public void testExecute() throws IOException {
 		SensorContextTester ctxTester = SensorContextTester.create(folder.getRoot().getAbsoluteFile().toPath());
-		ctxTester.settings().setProperty(Constants.SH_EXECUTABLE, "/bin/bash");
-		File baseFile = folder.newFile("test.ps1");
+		ctxTester.settings().setProperty(Constants.SH_EXECUTABLE, "bash");
+		File baseFile = folder.newFile("test.sh");
 
-		FileUtils.copyURLToFile(getClass().getResource("/testFiles/test.ps1"), baseFile);
-		DefaultInputFile ti = new TestInputFileBuilder(folder.getRoot().getAbsolutePath(), "test.ps1")
+		FileUtils.copyURLToFile(getClass().getResource("/testFiles/test.sh"), baseFile);
+		DefaultInputFile ti = new TestInputFileBuilder(folder.getRoot().getAbsolutePath(), "test.sh")
 				.initMetadata(new String(Files.readAllBytes(baseFile.toPath()))).setLanguage(BashLanguage.KEY)
 				.build();
 

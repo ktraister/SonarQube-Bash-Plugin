@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!--https://github.com/koalaman/shellcheck#gallery-of-bad-code -->
-<psrules>
+<shrules>
     <rule>
         <key>PSAlignAssignmentStatement</key>
         <internalKey>PSAlignAssignmentStatement</internalKey>
