@@ -13,7 +13,7 @@ public class BashQualityProfile extends ProfileDefinition {
 	}
 
 	public RulesProfile createProfile(final ValidationMessages validation) {
-		return xmlProfileParser.parseResource(getClass().getClassLoader(), "bash-profile.xml", validation)
+		return xmlProfileParser.parseResource(getClass().getClassLoader(), "bash-rules.xml", validation)
 				.setName(Constants.PROFILE_NAME).setLanguage(BashLanguage.KEY);
 	}
 }
